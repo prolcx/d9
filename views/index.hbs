@@ -1,0 +1,34 @@
+
+
+
+
+
+
+<div class="row row-cols-1 row-cols-md-3">
+    {{#each character}}
+  <div class="col mb-4">
+    <div class="card">
+      <img src="{{this.imgUrl}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{this.hero}}</h5>
+        <p class="card-text">{{this.dcrps}}</p>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+<tr>
+    <td>
+        <form action="/" method="GET">
+        <input type="hidden" name="offset" value="{{prev}}">
+        <button type="submit">Previous</button>
+        </form>
+    </td>
+    <td>
+        <form action="/" method="GET">
+        <input type="hidden" name="offset" value="{{next}}">
+        <button type="submit">Next</button>
+        </form>
+    </td>
+</tr>
